@@ -9,13 +9,13 @@ A complete example for Spring MVC + Maven + Hibernate CRUD operation
 + Run the following maven command to download all dependent JARs.
 
 ```
-mvn clean eclipse:eclipse
+mvn eclipse:clean eclipse:eclipse
 ```
 
 + Run Tomcat server 
 
 ```
-mvn tomcat7:run
+mvn clean tomcat7:run
 ```
 
 + Go to the browser and enter the following URL: 
