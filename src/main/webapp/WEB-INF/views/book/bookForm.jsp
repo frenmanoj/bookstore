@@ -5,43 +5,62 @@
 <c:url var="actionUrl" value="save" />
 
 <form:form id="bookForm" commandName="book" method="post"
-	action="${actionUrl }" class="pure-form pure-form-aligned">
+	action="${actionUrl }" class="form-horizontal">
 
-	<fieldset>
-		<legend></legend>
+	<div class="form-group">
+		<label for="name" class="col-xs-4 control-label">Name</label>
+		<div class="col-xs-8">
+			<form:input name="customerId" path="name" placeholder="Book Name"
+				class="form-control" />
+		</div>
+	</div>
 
-		<div class="pure-control-group">
-			<label for="name">Name</label>
-			<form:input name = "customerId" path="name" placeholder="Book Name" />
+	<div class="form-group">
+		<label for="code" class="col-xs-4 control-label">Code</label>
+		<div class="col-xs-8">
+			<form:input name="merocode" id="merocode" path="code"
+				placeholder="Code" maxlength="15" class="form-control" />
 		</div>
-		<div class="pure-control-group">
-			<label for="code">Code</label>
-			<form:input name="merocode" id = "merocode" path="code" placeholder="Code" maxlength="15" />
-		</div>
-		<div class="pure-control-group">
-			<label for="price">Price</label>
-			<form:input path="price" placeholder="Price"
-				maxlength="10" />
-		</div>
-		<div class="pure-control-group">
-			<label for="authors">Author(s)</label>
-			<form:input path="authors" placeholder="Authors" />
-		</div>
-		<div class="pure-control-group">
-			<label for="isbn">ISBN</label>
-			<form:input path="isbn" placeholder="ISBN" />
-		</div>
-		<div class="pure-control-group">
-			<label for="publisher">Publisher</label>
-			<form:input path="publisher" placeholder="Publisher" />
-		</div>
-		<div class="pure-control-group">
-			<label for="publishedOn">Published On</label>
-			<form:input path="publishedOn"
-				placeholder="YYYY-MM-DD" class="datepicker" />
-		</div>
+	</div>
 
-		<form:input path="id" type="hidden" />
+	<div class="form-group">
+		<label for="price" class="col-xs-4 control-label">Price</label>
+		<div class="col-xs-8">
+			<form:input path="price" placeholder="Price" maxlength="10"
+				class="form-control" />
+		</div>
+	</div>
 
-	</fieldset>
+	<div class="form-group">
+		<label for="authors" class="col-xs-4 control-label">Author(s)</label>
+		<div class="col-xs-8">
+			<form:input path="authors" placeholder="Authors" class="form-control" />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="isbn" class="col-xs-4 control-label">ISBN</label>
+		<div class="col-xs-8">
+			<form:input path="isbn" placeholder="ISBN" class="form-control" />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="publisher" class="col-xs-4 control-label">Publisher</label>
+		<div class="col-xs-8">
+			<form:input path="publisher" placeholder="Publisher"
+				class="form-control" />
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="publishedOn" class="col-xs-4 control-label">Published
+			On</label>
+		<div class="col-xs-8">
+			<form:input path="publishedOn" placeholder="YYYY-MM-DD"
+				class="datepicker form-control" />
+		</div>
+	</div>
+
+	<form:input path="id" type="hidden" />
 </form:form>

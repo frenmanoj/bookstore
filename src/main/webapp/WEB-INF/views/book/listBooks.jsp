@@ -5,13 +5,10 @@
 <title>List Of Books</title>
 
 <link rel="stylesheet"
-	href='<c:url value="/web-resources/css/pure-0.4.2.css"/>'>
-
+	href='<c:url value="/web-resources/lib/bootstrap-3.3.6/css/bootstrap.min.css"/>'>
+	
 <link rel="stylesheet"
-	href='<c:url value="/web-resources/css/font-awesome-4.0.3/css/font-awesome.css"/>'>
-
-<link rel="stylesheet"
-	href='<c:url value="/web-resources/css/jquery-ui-1.10.4.custom.css"/>'>
+	href='<c:url value="/web-resources/lib/jquery/jquery-ui-1.10.4.custom.css"/>'>
 
 <style type="text/css">
 th {
@@ -31,11 +28,11 @@ th {
 
 		<h1>List Of Books</h1>
 
-		<button class="pure-button pure-button-primary" onclick="addBook()">
-			<i class="fa fa-plus"></i> Add Book
+		<button class="btn btn-primary" onclick="addBook()">
+			<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Book
 		</button>
 		<br>
-		<table class="pure-table pure-table-bordered pure-table-striped">
+		<table class="table table-striped table-bordered">
 			<thead>
 				<tr>
 					<th width="4%">S.N</th>
@@ -62,15 +59,16 @@ th {
 						<td><c:out value="${book.publishedOn}" /></td>
 
 						<td><nobr>
-								<button class="pure-button pure-button-primary"
+								<button class="btn btn-primary"
 									onclick="editBook(${book.id});">
 
-									<i class="fa fa-pencil"></i> Edit
+									<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit
 								</button>
 
-								<a class="pure-button pure-button-primary"
+								<a class="btn btn-primary"
 									onclick="return confirm('Are you sure you want to delete this book?');"
-									href="delete/${book.id}"> <i class="fa fa-times"></i>Delete
+									href="delete/${book.id}"> 
+									<span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete
 								</a>
 
 							</nobr></td>
@@ -83,11 +81,13 @@ th {
 
 	<!--  It is advised to put the <script> tags at the end of the document body so they don't block rendering of the page -->
 	<script type="text/javascript"
-		src='<c:url value="/web-resources/js/lib/jquery-1.10.2.js"/>'></script>
+		src='<c:url value="/web-resources/lib/jquery/jquery-1.10.2.js"/>'></script>
 	<script type="text/javascript"
-		src='<c:url value="/web-resources/js/lib/jquery-ui-1.10.4.custom.js"/>'></script>
+		src='<c:url value="/web-resources/lib/jquery/jquery-ui-1.10.4.custom.js"/>'></script>
 	<script type="text/javascript"
-		src='<c:url value="/web-resources/js/lib/jquery.ui.datepicker.js"/>'></script>
+		src='<c:url value="/web-resources/lib/jquery/jquery.ui.datepicker.js"/>'></script>
+	<script type="text/javascript"
+		src='<c:url value="/web-resources/lib/bootstrap-3.3.6/js/bootstrap.min.js"/>'></script>
 	<script type="text/javascript"
 		src='<c:url value="/web-resources/js/js-for-listBooks.js"/>'></script>
 </body>
