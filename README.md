@@ -23,3 +23,7 @@ mvn clean tomcat7:run
 http://localhost:8080/bookstore/book/
 ```
 The port number might be different in your case. Please have a look at the tomcat log in console for that.
+
+# Blog Reference:
+
+[https://shrestha-manoj.blogspot.com/2014/05/spring-mvc-maven-hibernate-crud-example.html](https://shrestha-manoj.blogspot.com/2014/05/spring-mvc-maven-hibernate-crud-example.html)
